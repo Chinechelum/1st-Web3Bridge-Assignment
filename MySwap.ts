@@ -5,7 +5,7 @@ async function main() {
     // let valid1, valid2, valid3, valid4;
     let [valid1, valid2, valid3, valid4, valid5] = await ethers.getSigners();
 
-    const MySwapThing = await ethers.getContractFactory("MySwap", "0x94dd7AB066bABB362453855aE4e702baa066127F");
+    const MySwapThing = await ethers.getContractFactory("MySwap");
     const mySwapThing = await MySwapThing.deploy();
 
     await mySwapThing.deployed();
